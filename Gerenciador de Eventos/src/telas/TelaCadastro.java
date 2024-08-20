@@ -1,3 +1,5 @@
+package telas;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -42,7 +44,6 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cadastro Icone.png"))); // NOI18N
 
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setToolTipText("");
 
         jLabel2.setText("Nome");
