@@ -129,7 +129,14 @@
             <Property name="text" type="java.lang.String" value="Login"/>
           </Properties>
         </Component>
+<<<<<<< HEAD
         <Component class="javax.swing.JTextField" name="TxtLogin">
+=======
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+          </Events>
+>>>>>>> 1f6838f5ab3cc91a7b0051dabe3bae5dd554b10d
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>

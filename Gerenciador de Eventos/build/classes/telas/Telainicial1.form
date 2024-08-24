@@ -92,10 +92,10 @@
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="TxtLogin" min="-2" pref="258" max="-2" attributes="0"/>
+                          <Component id="jTextField1" min="-2" pref="258" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="TxtSenha" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
+                          <Component id="jPasswordField2" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="78" max="32767" attributes="0"/>
@@ -108,11 +108,11 @@
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="TxtLogin" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Component id="TxtSenha" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPasswordField2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -129,29 +129,19 @@
             <Property name="text" type="java.lang.String" value="Login"/>
           </Properties>
         </Component>
-<<<<<<< HEAD
-        <Component class="javax.swing.JTextField" name="TxtLogin">
-=======
         <Component class="javax.swing.JTextField" name="jTextField1">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
-          </Events>
->>>>>>> 1f6838f5ab3cc91a7b0051dabe3bae5dd554b10d
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="TxtSenha">
+        <Component class="javax.swing.JPasswordField" name="jPasswordField2">
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Entrar"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
