@@ -103,6 +103,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu4.setIconTextGap(-1);
         jMenuBar1.add(jMenu4);
+        jMenu4.getAccessibleContext().setAccessibleDescription("<html>\n<head>\n<title>Page Title</title>\n</head>\n<body>\n\n<h1>V 1.0 Aspirado</h1>\n<p>Sistema criado em:  01/08/2024</p>\n<p>Atualizado em: 17/08/2024</p>\n<p>Sistema desenvolvido pela Empresas brasileira VisionUp</p>\n</body>\n</html>\n");
 
         jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Saida.jpeg"))); // NOI18N
         jMenu5.setText("Saida");
