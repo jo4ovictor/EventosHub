@@ -25,6 +25,8 @@ public class TelaCadastro extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         TxtSenha = new javax.swing.JTextField();
+        TxtConfirmaSenha = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro");
@@ -59,6 +61,8 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setText("Confirmar Senha");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -70,21 +74,24 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(69, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TxtNome, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TxtEmail)
-                    .addComponent(TxtSenha, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButton1)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TxtNome, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TxtEmail)
+                        .addComponent(TxtSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TxtConfirmaSenha, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addGap(56, 56, 56))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -96,9 +103,13 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TxtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TxtConfirmaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(jButton1)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -119,38 +130,41 @@ public class TelaCadastro extends javax.swing.JFrame {
         if(TxtNome.getText().equals("") || TxtEmail.getText().equals("") || TxtSenha.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane, "Preecha todos os campos.");
         }else{
-            
-            Usuario usuarionovo = new Usuario(
-            TxtNome.getText(),
-            TxtEmail.getText(),
-            TxtSenha.getText()
-            );
-        
-            ConexaoBanco conexao = new ConexaoBanco();
-            UsuarioDao novoUser = new UsuarioDao(conexao.c);
-            Usuario verificar = novoUser.buscarUsuario(usuarionovo.getEmail());
-            TelaCadastro cadastro = new TelaCadastro();
-            if(verificar == null){
-             try{ 
-                 String resposta = novoUser.CadastrarUsuario(usuarionovo);
-                    if (resposta.equals("Ok")){
-                        JOptionPane.showMessageDialog(rootPane, "Usuário cadastrado com sucesso.");
-                        TxtNome.setText("");
-                        TxtEmail.setText("");
-                        TxtSenha.setText("");
-                    }else{
-                        JOptionPane.showMessageDialog(rootPane, "Erro ao cadastrar usuário: " + resposta);
-                    }
-             }catch(Exception ex){
+            if(TxtSenha.getText().equals(TxtConfirmaSenha.getText())){
+                Usuario usuarionovo = new Usuario(
+                TxtNome.getText(),
+                TxtEmail.getText(),
+                TxtSenha.getText()
+                );
 
-                JOptionPane.showMessageDialog(rootPane , "Ocorreu um erro inesperado!" + ex);
-                ex.printStackTrace();
-             }
+                ConexaoBanco conexao = new ConexaoBanco();
+                UsuarioDao novoUser = new UsuarioDao(conexao.c);
+                Usuario verificar = novoUser.buscarUsuario(usuarionovo.getEmail());
+                TelaCadastro cadastro = new TelaCadastro();
+                if(verificar == null){
+                 try{ 
+                     String resposta = novoUser.CadastrarUsuario(usuarionovo);
+                        if (resposta.equals("Ok")){
+                            JOptionPane.showMessageDialog(rootPane, "Usuário cadastrado com sucesso.");
+                            TxtNome.setText("");
+                            TxtEmail.setText("");
+                            TxtSenha.setText("");
+                        }else{
+                            JOptionPane.showMessageDialog(rootPane, "Erro ao cadastrar usuário: " + resposta);
+                        }
+                 }catch(Exception ex){
+
+                    JOptionPane.showMessageDialog(rootPane , "Ocorreu um erro inesperado!" + ex);
+                    ex.printStackTrace();
+                 }
+                }else{
+                    JOptionPane.showMessageDialog(rootPane , "Usuário já existe");
+                    TxtNome.setText("");
+                    TxtEmail.setText("");
+                    TxtSenha.setText("");
+                }
             }else{
-                JOptionPane.showMessageDialog(rootPane , "Usuário já existe");
-                TxtNome.setText("");
-                TxtEmail.setText("");
-                TxtSenha.setText("");
+                JOptionPane.showMessageDialog(rootPane , "Senhas incorretas");
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -160,6 +174,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_TxtNomeActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TxtConfirmaSenha;
     private javax.swing.JTextField TxtEmail;
     private javax.swing.JTextField TxtNome;
     private javax.swing.JTextField TxtSenha;
@@ -169,5 +184,6 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
