@@ -261,7 +261,5 @@ private void ApiEndereco(String cep) throws MalformedURLException, IOException{
             ex.printStackTrace();
         }
         }
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(TelaCadastroEvento::new);
-    }
+    
 }
