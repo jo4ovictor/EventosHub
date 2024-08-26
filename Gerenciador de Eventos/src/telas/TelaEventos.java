@@ -128,13 +128,12 @@ public class TelaEventos extends javax.swing.JInternalFrame {
                         .addGap(14, 14, 14))))
         );
 
-<<<<<<< HEAD
         setBounds(0, 0, 406, 321);
-=======
+
         getAccessibleContext().setAccessibleName("Minhas Incrições");
 
         pack();
->>>>>>> 1c475c833866f21b0d434baf1340d4f83b95a634
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
