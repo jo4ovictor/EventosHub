@@ -42,7 +42,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
         jDesktopPane2Layout.setVerticalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 418, Short.MAX_VALUE)
+            .addGap(0, 442, Short.MAX_VALUE)
         );
 
         jDesktopPane1.setLayer(jDesktopPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -62,7 +62,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Usuario icone.png"))); // NOI18N
         jMenu2.setText("Inscrições");
-        jMenu2.setIconTextGap(-2);
+        jMenu2.setIconTextGap(-13);
         jMenu2.setPreferredSize(new java.awt.Dimension(90, 30));
 
         jMenuItem2.setText("Minhas inscrições");
@@ -104,7 +104,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu4.setIconTextGap(-1);
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Sair icone.png"))); // NOI18N
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Saida.jpeg"))); // NOI18N
         jMenu5.setText("Saida");
 
         jMenuItem10.setText("Sair");
