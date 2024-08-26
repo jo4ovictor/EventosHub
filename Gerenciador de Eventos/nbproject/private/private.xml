@@ -3,18 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/João/Desktop/EventosHub/Gerenciador%20de%20Eventos/src/dao/UsuarioDao.java</file>
+            <file>file:/C:/Users/João/Desktop/EventosHub/Gerenciador%20de%20Eventos/src/telas/TelaPrincipal2.java</file>
             <file>file:/C:/Users/João/Desktop/EventosHub/Gerenciador%20de%20Eventos/src/telas/TelaCadastro.java</file>
-            <file>file:/C:/Users/João/Desktop/EventosHub/Gerenciador%20de%20Eventos/src/modelo/Sessao.java</file>
-            <file>file:/C:/Users/João/Desktop/EventosHub/Gerenciador%20de%20Eventos/src/telas/Telainicial.java</file>
-=======
-            <file>file:/C:/Users/fabri/OneDrive/Área%20de%20Trabalho/EventosHub/Gerenciador%20de%20Eventos/src/telas/TelaPrincipal.java</file>
-            <file>file:/C:/Users/fabri/OneDrive/Área%20de%20Trabalho/EventosHub/Gerenciador%20de%20Eventos/src/telas/Telainicial1.java</file>
-            <file>file:/C:/Users/fabri/OneDrive/Área%20de%20Trabalho/EventosHub/Gerenciador%20de%20Eventos/src/telas/TelaCadastro.java</file>
-            <file>file:/C:/Users/fabri/OneDrive/Área%20de%20Trabalho/EventosHub/Gerenciador%20de%20Eventos/src/telas/TelaPrincipal2.java</file>
-            <file>file:/C:/Users/fabri/OneDrive/Área%20de%20Trabalho/EventosHub/Gerenciador%20de%20Eventos/src/telas/TelaCadastro3.java</file>
->>>>>>> 1f6838f5ab3cc91a7b0051dabe3bae5dd554b10d
+            <file>file:/C:/Users/João/Desktop/EventosHub/Gerenciador%20de%20Eventos/src/telas/CadastroEvento.java</file>
         </group>
     </open-files>
 </project-private>
